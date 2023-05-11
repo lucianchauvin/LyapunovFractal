@@ -3,7 +3,7 @@ import math
 
 rez = 2000
 
-im = Image.new(mode="RGB", size=(rez, rez))
+im = Image.new(mode="RGB", size=(88, rez))
 
 maxIter = 10**2
 

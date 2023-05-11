@@ -40,21 +40,20 @@ RGBColor getC(double n){
 
 int main(){
 
-    int width  = 512;
-    int height = 512;
+    int width  = 88;
+    int height = 31;
 
     vector<double> aR = {3.4,4};
     vector<double> bR = {3.3,4};
 
     vector<double> all;
 
-    Image i(width, height, "sample.bmp", RGBColor (0, 0, 0));
+    Image i(width, height, "test.bmp", RGBColor (0, 0, 0));
     for(int y = 0; y < height; y++){
         for(int x = 0; x < width; x++){
             double a = ((y/(double) height) * (aR[1] - aR[0])) + aR[0];
             double b = ((x/(double) width)  * (bR[1] - bR[0])) + bR[0];
             double lyExp = ly(a,b);
-            // cout << lyExp << endl;
             i.SetPixel(x, height-y-1, getC(lyExp)); 
         }
     }
